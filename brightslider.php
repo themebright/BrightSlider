@@ -8,9 +8,9 @@ Author URI: http://themebright.com/
 Version: 1.0.0
 */
 
-function brightslider_register_post_types() {
+function bs_register_post_types() {
 
-  register_post_type( 'tb_slide', array(
+  register_post_type( 'bs_slide', array(
     'label' => 'Slides',
     'labels' => array(
       'name'               => __( 'Slides', 'brightslider' ),
@@ -33,11 +33,13 @@ function brightslider_register_post_types() {
     'menu_icon' => 'dashicons-slides',
     'supports' => array(
       'title',
-      'editor',
       'revisions',
       'thumbnail'
      )
   ) );
 
 }
-add_action( 'init', 'brightslider_register_post_types' );
+add_action( 'init', 'bs_register_post_types' );
+
+require_once 'inc/library/ct-meta-box/ct-meta-box.php';
+require_once 'inc/slide-fields.php';
