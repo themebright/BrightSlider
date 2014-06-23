@@ -1,0 +1,3 @@
+# BrightSlider
+
+This is the slider built to accompany [ThemeBright](http://themebright.com/) themes. By separating the slider functionality into a plugin, we allow for more standarized behavior in themes and guard against the theme lock-in effect.
