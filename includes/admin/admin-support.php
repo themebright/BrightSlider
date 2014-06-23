@@ -16,8 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
  *
  * Show a message if current theme does not support the plugin.
  * Pulled almost entirely (and gratefully) from the Church Themes Content plugin.
- *
- * @since 0.9
  */
 function brightslider_get_theme_support_notice() {
 
@@ -59,8 +57,6 @@ add_action( 'admin_notices', 'brightslider_get_theme_support_notice' );
  * Dismiss admin notice.
  *
  * Save data to keep message from showing on this theme.
- *
- * @since 0.9
  */
 function brightslider_hide_theme_support_notice() {
 
