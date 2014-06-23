@@ -1,45 +1,36 @@
 <?php
 /*
 Plugin Name: BrightSlider
+Plugin URI:  http://themebright.com/plugins/brightslider/
 Description: The slider built to accompany <a href="http://themebright.com/">ThemeBright</a> themes.
-Plugin URI: http://themebright.com/plugins/brightslider/
-Author: ThemeBright
-Author URI: http://themebright.com/
-Version: 1.0.0
+Version:     1.0.0
+Author:      ThemeBright
+Author URI:  http://themebright.com/
+License:     GPL3
+Text Domain: brightslider
+Domain Path: /languages
 */
 
-function bs_register_post_types() {
+if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
 
-  register_post_type( 'bs_slide', array(
-    'label' => 'Slides',
-    'labels' => array(
-      'name'               => __( 'Slides', 'brightslider' ),
-      'singular_name'      => __( 'Slide', 'brightslider' ),
-      'menu_name'          => __( 'Slides', 'brightslider' ),
-      'name_admin_bar'     => __( 'Slide', 'brightslider' ),
-      'add_new'            => __( 'Add New', 'brightslider' ),
-      'add_new_item'       => __( 'Add New Slide', 'brightslider' ),
-      'new_item'           => __( 'New Slide', 'brightslider' ),
-      'edit_item'          => __( 'Edit Slide', 'brightslider' ),
-      'view_item'          => __( 'View Slide', 'brightslider' ),
-      'all_items'          => __( 'All Slides', 'brightslider' ),
-      'search_items'       => __( 'Search Slides', 'brightslider' ),
-      'parent_item_colon'  => __( 'Parent Slides:', 'brightslider' ),
-      'not_found'          => __( 'No slides found.', 'brightslider' ),
-      'not_found_in_trash' => __( 'No slides found in Trash.', 'brightslider' )
-    ),
-    'public' => false,
-    'show_ui' => true,
-    'menu_icon' => 'dashicons-slides',
-    'supports' => array(
-      'title',
-      'revisions',
-      'thumbnail'
-     )
-  ) );
+/**
+ * Load text domain.
+ */
+function my_plugin_load_plugin_textdomain() {
+
+  $lang_dir = basename( dirname( __FILE__ ) ) . '/languages/';
+
+  load_plugin_textdomain( 'brightslider', FALSE, $lang_dir );
 
 }
-add_action( 'init', 'bs_register_post_types' );
+add_action( 'plugins_loaded', 'my_plugin_load_plugin_textdomain' );
 
-require_once 'inc/library/ct-meta-box/ct-meta-box.php';
-require_once 'inc/slide-fields.php';
+/**
+ * Includes
+ */
+require_once 'includes/post-types.php';
+
+if ( is_admin() ) {
+  require_once 'includes/library/ct-meta-box/ct-meta-box.php';
+  require_once 'includes/slide-fields.php';
+}
