@@ -31,6 +31,7 @@ add_action( 'plugins_loaded', 'my_plugin_load_plugin_textdomain' );
 require_once 'includes/post-types.php';
 
 if ( is_admin() ) {
+  require_once 'includes/admin/admin-support.php';
+  require_once 'includes/admin/slide-fields.php';
   require_once 'includes/library/ct-meta-box/ct-meta-box.php';
-  require_once 'includes/slide-fields.php';
 }
