@@ -16,14 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
 /**
  * Load text domain.
  */
-function my_plugin_load_plugin_textdomain() {
+function brightslider_load_plugin_textdomain() {
 
   $lang_dir = basename( dirname( __FILE__ ) ) . '/languages/';
 
   load_plugin_textdomain( 'brightslider', FALSE, $lang_dir );
 
 }
-add_action( 'plugins_loaded', 'my_plugin_load_plugin_textdomain' );
+add_action( 'plugins_loaded', 'brightslider_load_plugin_textdomain' );
 
 /**
  * Includes
