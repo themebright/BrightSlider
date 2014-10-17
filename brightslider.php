@@ -11,7 +11,7 @@ Text Domain: brightslider
 Domain Path: /languages
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Load text domain.
@@ -26,7 +26,7 @@ function brightslider_load_plugin_textdomain() {
 add_action( 'plugins_loaded', 'brightslider_load_plugin_textdomain' );
 
 /**
- * Includes
+ * Load includes.
  */
 require_once 'includes/post-types.php';
 

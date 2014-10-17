@@ -1,19 +1,11 @@
 <?php
 /**
  * Slide Fields
- *
- * @link       https://bitbucket.org/themebright/themebright-framework
- * @since      1.0.0
- *
- * @package    BrightSlider
- * @subpackage Admin
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Slide settings.
- *
  * Adds slide settings meta box.
  */
 function brightslider_add_meta_box_slide_settings() {

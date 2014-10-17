@@ -1,15 +1,9 @@
 <?php
 /**
  * Post Types
- *
- * @link       https://bitbucket.org/themebright/themebright-framework
- * @since      1.0.0
- *
- * @package    BrightSlider
- * @subpackage Functions
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Register slide post type.

@@ -1,43 +1,35 @@
 <?php
 /**
  * Admin Support
- *
- * @link       https://bitbucket.org/themebright/themebright-framework
- * @since      1.0.0
- *
- * @package    BrightSlider
- * @subpackage Admin
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Show admin notice.
- *
  * Show a message if current theme does not support the plugin.
  * Pulled almost entirely (and gratefully) from the Church Themes Content plugin.
  */
 function brightslider_get_theme_support_notice() {
 
-  // theme does not support plugin
+  // Theme does not support plugin
   if ( ! current_theme_supports( 'brightslider' ) ) {
 
-    // show only if user has some control over plugins and themes
+    // Show only if user has some control over plugins and themes
     if ( ! current_user_can( 'activate_plugins' ) && ! current_user_can( 'switch_themes' ) ) {
       return;
     }
 
-    // show only on relavent pages as not to overwhelm admin
+    // Show only on relavent pages as not to overwhelm admin
     $screen = get_current_screen();
     if ( ! in_array( $screen->base, array( 'themes', 'plugins' ) ) && ! preg_match( '/^bs_.+/', $screen->post_type ) ) {
       return;
     }
 
-    // option ID
+    // Option ID
     $theme_data = wp_get_theme();
-    $option_id = 'brightslider_hide_theme_support_notice-' . $theme_data['Template']; // unique to theme so if change, message shows again
+    $option_id = 'brightslider_hide_theme_support_notice-' . $theme_data['Template']; // Unique to theme so if changed, message shows again
 
-    // message has not been dismissed for this theme
+    // Message has not been dismissed for this theme
     if ( ! get_option( $option_id ) ) {
 
       ?>
@@ -54,24 +46,22 @@ function brightslider_get_theme_support_notice() {
 add_action( 'admin_notices', 'brightslider_get_theme_support_notice' );
 
 /**
- * Dismiss admin notice.
- *
  * Save data to keep message from showing on this theme.
  */
 function brightslider_hide_theme_support_notice() {
 
-  // user requested dismissal
+  // User requested dismissal
   if ( ! empty( $_GET['brightslider_hide_theme_support_notice'] ) ) {
 
-    // option ID
+    // Option ID
     $theme_data = wp_get_theme();
-    $option_id = 'brightslider_hide_theme_support_notice-' . $theme_data['Template']; // unique to theme so if change, message shows again
+    $option_id = 'brightslider_hide_theme_support_notice-' . $theme_data['Template']; // Unique to theme so if changed, message shows again
 
-    // mark notice for this theme as dismissed
+    // Mark notice for this theme as dismissed
     update_option( $option_id, '1' );
 
   }
 
 }
 
-add_action( 'admin_init', 'brightslider_hide_theme_support_notice' ); // before admin_notices
+add_action( 'admin_init', 'brightslider_hide_theme_support_notice' ); // Before admin_notices
