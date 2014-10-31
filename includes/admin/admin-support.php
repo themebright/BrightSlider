@@ -33,9 +33,11 @@ function brightslider_get_theme_support_notice() {
     if ( ! get_option( $option_id ) ) {
 
       ?>
+
       <div class="error">
          <p><?php printf( __( 'The <b>%1$s</b> theme does not support the <b>BrightSlider</b> plugin. <a href="%2$s">Dismiss</a>', 'brightslider' ), wp_get_theme(), add_query_arg( 'brightslider_hide_theme_support_notice', '1' ) ); ?></p>
       </div>
+
       <?php
 
     }

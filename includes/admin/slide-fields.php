@@ -20,7 +20,7 @@ function brightslider_add_meta_box_slide_settings() {
       '_bs_show_title' => array(
         'name'           => __( 'Show title?', 'brightslider' ),
         'type'           => 'checkbox',
-        'checkbox_label' => __( 'Check this to display the title above the slide text.', 'brightslider' )
+        'checkbox_label' => __( 'Display the title above the slide text.', 'brightslider' )
       ),
       '_bs_slide_text' => array(
         'name' => __( 'Slide Text', 'brightslider' ),
