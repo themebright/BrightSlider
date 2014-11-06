@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: BrightSlider
-Plugin URI:  http://themebright.com/go/brightslider/
+Plugin URI:  http://themebright.co/go/brightslider/
 Description: The ThemeBright slider.
 Author:      ThemeBright
-Author URI:  http://themebright.com/
-Version:     1.0.0
+Author URI:  http://themebright.co/
+Version:     1.0.1
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
