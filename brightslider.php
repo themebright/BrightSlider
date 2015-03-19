@@ -1,24 +1,30 @@
 <?php
 /*
 Plugin Name: BrightSlider
-Plugin URI:  http://themebright.co/go/brightslider/
+Plugin URI:  http://themebright.com/go/brightslider/
 Description: The ThemeBright slider.
 Author:      ThemeBright
-Author URI:  http://themebright.co/
-Version:     1.0.1
+Author URI:  http://themebright.com/
+Version:     1.0.2
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
-/**
- * Load includes.
- */
-$plugin_dir = dirname( __FILE__ );
-
-require_once $plugin_dir . '/includes/post-types.php';
+require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types.php' );
 
 if ( is_admin() ) {
-  require_once $plugin_dir . '/includes/admin/admin-support.php';
-  require_once $plugin_dir . '/includes/admin/slide-fields.php';
-  require_once $plugin_dir . '/includes/library/ct-meta-box/ct-meta-box.php';
+
+  if ( ! class_exists( 'CT_Meta_Box' ) ) {
+    require_once( plugin_dir_path( __FILE__ ) . 'includes/library/ct-meta-box/ct-meta-box.php' );
+  }
+
+  if ( ! defined( 'CTMB_URL' ) ) {
+    define( 'CTMB_URL', plugin_dir_url( __FILE__ ) . 'includes/library/ct-meta-box' );
+  }
+
+  require_once( plugin_dir_path( __FILE__ ) . 'includes/admin/admin-support.php' );
+  require_once( plugin_dir_path( __FILE__ ) . 'includes/admin/slide-fields.php' );
+
 }

@@ -3,7 +3,9 @@
  * Admin Support
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
 /**
  * Show a message if current theme does not support the plugin.

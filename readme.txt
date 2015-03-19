@@ -2,8 +2,8 @@
 Contributors: themebright, GalenGidman
 Tags: themebright, slider, sliders, slides, images, image, image slider, themebright slider, bright, brightslider, bright slider, theme bright, theme bright slider, church, church slider, church image slider
 Requires at least: 3.6
-Tested up to: 4.0
-Stable tag: trunk
+Tested up to: 4.1.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,8 +21,3 @@ Upload and activate the plugin.
 
 = Can I use this plugin with non-ThemeBright themes? =
 If you've got development chops, you shouldn't find it too difficult to integrate this with your own theme. But for those wanting a plug-n-play solution, you best look for another option.
-
-== Changelog ==
-
-= 1.0 =
-* First release

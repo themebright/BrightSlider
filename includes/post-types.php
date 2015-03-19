@@ -3,7 +3,9 @@
  * Post Types
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
 /**
  * Register slide post type.

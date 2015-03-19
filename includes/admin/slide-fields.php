@@ -3,7 +3,9 @@
  * Slide Fields
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
 /**
  * Adds slide settings meta box.
