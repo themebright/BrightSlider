@@ -1,5 +1,5 @@
 === BrightSlider ===
-Contributors: themebright
+Contributors: themebright, GalenGidman
 Requires at least: 3.6
 Tested up to: 4.4.1
 Stable tag: 1.1.0
