@@ -1,9 +1,8 @@
 === BrightSlider ===
-Contributors: themebright, GalenGidman
-Tags: themebright, slider, sliders, slides, images, image, image slider, themebright slider, bright, brightslider, bright slider, theme bright, theme bright slider, church, church slider, church image slider
+Contributors: themebright
 Requires at least: 3.6
-Tested up to: 4.1.1
-Stable tag: 1.0.2
+Tested up to: 4.4.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +10,7 @@ The ThemeBright slider.
 
 == Description ==
 
-This is the official ThemeBright slider that powers all the ThemeBright themes. If you've purchased a theme from ThemeBright.co that has a slider, you need this plugin to make it work.
+The slider that powers ThemeBright themes. If you bought a theme from ThemeBright, you'll need to install this to make it work.
 
 == Installation ==
 

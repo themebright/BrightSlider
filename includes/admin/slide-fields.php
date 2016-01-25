@@ -19,13 +19,8 @@ function brightslider_add_meta_box_slide_settings() {
     'context'   => 'normal',
     'priority'  => 'high',
     'fields'    => array(
-      '_bs_show_title' => array(
-        'name'           => __( 'Show title?', 'brightslider' ),
-        'type'           => 'checkbox',
-        'checkbox_label' => __( 'Display the title above the slide text.', 'brightslider' )
-      ),
       '_bs_slide_text' => array(
-        'name' => __( 'Slide Text', 'brightslider' ),
+        'name' => __( 'Slide text', 'brightslider' ),
         'type' => 'textarea'
       ),
       '_bs_slide_url'  => array(
@@ -35,7 +30,7 @@ function brightslider_add_meta_box_slide_settings() {
     )
   );
 
-  new CT_Meta_Box( $args );
+  new CT_Meta_Box( apply_filters( 'brightslider_add_meta_box_slide_settings', $args ) );
 
 }
 add_action( 'admin_init', 'brightslider_add_meta_box_slide_settings' );
